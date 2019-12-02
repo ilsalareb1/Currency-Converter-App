@@ -1,0 +1,24 @@
+1-start with html 
+-build outline
+-class for current currency
+-id for name of currenct currency
+-class wanted currency 
+
+2-work on js 
+-api key = aa7cbda9baeeeda7532c0f97afaafdc6
+
+-http://data.fixer.io/api/latest
+
+    ? access_key = YOUR_ACCESS_KEY
+    & base = GBP
+    & symbols = USD,AUD,CAD,PLN,MXN
+
+-fetch value by inputed name of current currency 
+-use logic/ math in object to convert amount of current currency into different currency 
+-one algorithm for cc
+one algorithm for wc
+-one for DOMstrings
+
+
+3-Decorate with css
+-animated gradients and scroll animations maybe
