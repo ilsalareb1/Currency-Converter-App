@@ -1,26 +1,24 @@
-export const DOMStrings = {
-    InputCurrency : document.getElementById("CurrentCurrency"),
-    InputWanted: document.getElementById("WantedCurrency"),
-    InputAmount: document.getElementById("amount"),
-    ConvertedAmount: document.getElementsByClassName("display-amount-wc"),
-    ConvertedCurrency: document.getElementsByClassName("display-name-wc")
+const DOMstrings = {
+    displayWantedCurrency: document.getElementsByClassName(".display-name-wc"),
+    displayConvertedAmount: document.getElementsByClassName(".display-amount-wc"),
+    type: document.querySelector(".type"),
+    input: document.getElementById("currency-form")
 };
 
-export function getCurrencyInfo (){
-    DOMStrings.InputAmount.addEventListener("submit", async function (e) {
+DOMstrings.input.addEventListener("keypress", function(event){
+    if (event.keyCode === 13){
+        event.preventDefault();
+        document.querySelector(".nes-btn").click();
+    }
+});
+
+function init(){
+    document.getElementById("currency-form").addEventListener("sumbit", function(e){
         e.preventDefault();
-
-        if(DOMStrings.InputAmount.value == ""){
-            alert("Please input all values!");
-        }
-
-        try{
-            const exchangeRate = await fetch (`http://data.fixer.io/api/latest?access_key=aa7cbda9baeeeda7532c0f97afaafdc6`);
-            
-            DOMstrings.ConvertedAmount.value = function converter() {
-                exchangeRate * DOMStrings.InputAmount.value
-            };
-        }
-
-    });
+        const CurrentCurrency = document.getElementById("CurrentCurrency").value;
+        fetch(`http://data.fixer.io/api/latest?=access_key=aa7cbda9baeeeda7532c0f97afaafdc6&base=USD`).then(result => {
+            return result.json();
+        })
+    })
+    
 }
