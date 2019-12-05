@@ -15,10 +15,20 @@ DOMstrings.input.addEventListener("keypress", function(event){
 function init(){
     document.getElementById("currency-form").addEventListener("sumbit", function(e){
         e.preventDefault();
-        const CurrentCurrency = document.getElementById("CurrentCurrency").value;
-        fetch(`http://data.fixer.io/api/latest?=access_key=aa7cbda9baeeeda7532c0f97afaafdc6&base=USD`).then(result => {
-            return result.json();
-        })
+        DOMstrings.displayWantedCurrency.innerText = 'test';
+
+        const CurrentCurrency = document.querySelector("#CurrentCurrency").value();
+        try{
+            const result = await fetch (`http://data.fixer.io/api/latest?=access_key=aa7cbda9baeeeda7532c0f97afaafdc6&symbols`);
+        }
+        finally {
+            await result.json();
+        } 
+        const displayWantedCurrency = function (data) {
+            DOMstrings.displayWantedCurrency.innerText = data.name;
+            
+        }
+        
     })
     
 }
