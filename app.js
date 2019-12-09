@@ -1,4 +1,5 @@
 const DOMstrings = {
+    AmountCurrentCurrency: document.getElementById("amount"),
     displayWantedCurrency: document.getElementsByClassName(".display-name-wc"),
     displayConvertedAmount: document.getElementsByClassName(".display-amount-wc"),
     type: document.querySelector(".type"),
@@ -13,22 +14,28 @@ DOMstrings.input.addEventListener("keypress", function(event){
 });
 
 function init(){
-    document.getElementById("currency-form").addEventListener("sumbit", function(e){
+    document.getElementById("currency-form").addEventListener("sumbit", async function(e){
         e.preventDefault();
         DOMstrings.displayWantedCurrency.innerText = 'test';
-
-        const CurrentCurrency = document.querySelector("#CurrentCurrency").value();
-        try{
-            const result = await fetch (`http://data.fixer.io/api/latest?=access_key=aa7cbda9baeeeda7532c0f97afaafdc6&symbols`);
+        const ExchangeRates = await fetch (`http://data.fixer.io/api/latest?=access_key=aa7cbda9baeeeda7532c0f97afaafdc6&symbols=USD,AUD,CAD,PLN,MXN`);
+        await ExchangeRates.json(); 
+        calculateConvertedAmount(AmountCurrentCurrency){
+            ExchangeRates * AmountCurrentCurrency;
         }
-        finally {
-            await result.json();
-        } 
-        const displayWantedCurrency = function (data) {
-            DOMstrings.displayWantedCurrency.innerText = data.name;
-            
+        try {
+            const displayWantedCurrency = function (data) {
+              DOMstrings.displayWantedCurrency.innerText = data.name;
+              DOMstrings.displayConvertedAmount.innerText = data.id;
+              DOMstrings.type.textContent = data.types.map(data => data.type.name);    
+            };
+            displayWantedCurrency(data);
+            document.querySelector("#CurrentCurrency").value = "";  
+        }catch (error){
+            console.log(error);
+            DOMstrings.type.textContent = 'Error Please try again';
         }
-        
-    })
+    });
     
 }
+
+init();
