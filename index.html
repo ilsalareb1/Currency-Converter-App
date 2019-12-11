@@ -11,43 +11,100 @@
         <div class="header">CURRENCY CONVERTER</div>
     </div>
 
-    <div class="container">
-        <form id=form>
+    <div class="user-input">
+        <form id=currency-form>
             <div class="currency-form-input">
-                <label for="amount">&#36;</label>
-                <input type="number" id="MoneyInput" class="text-box" placeholder="Enter amount in USD">
-            </div>
-       </form>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" class="text-box">
 
-
-       <div class="currency-1">
-           <h2 class="currency-title">Euro</h2>
-           <label for="symbol">&#8364;</label>
-           <p class= "currency-value" id="euro">0</p>
+                <select id= "CurrentCurrency">
+                    <option value = "1">AUD</option>
+                    <option value = "2">CAD</option>
+                    <option value = "3">CZK</option>
+                    <option value = "4">HKD</option>+
+                    
+                    <option value = "5">IDR</option>
+                    <option value = "6">JPY</option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
            
-       </div>
+                </select>
+            </div>
+           
+            
+            <div class= "currency-convert-input">
+                <label>Convert to:</label>
+                <select id= "WantedCurrency">
+                    <option value = "1">AUD</option>
+                    <option value = "2">CAD</option>
+                    <option value = "3">CZK</option>
+                    <option value = "4">HKD</option>
+                    <option value = "5">IDR</option>
+                    <option value = "6">JPY</option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                    <option value = ""></option>
+                </select>
+            </div> 
 
-       <div class="output">
-         <div class="JPY">
-                <label for="japan-yen-symbol">&#xa5;</label>  
-         </div> 
-         <div class="CAD">
-                <label for="canadian-dollar-symbol">&#xFF04;</label>   
-         </div> 
-         <div class="CHF">
-                <label for="swiss-france- symbol">&#x20A3;</label>   
-         </div> 
-         <div class="GBP">
-                <label for="great-british-pound-symbol">&#xa3;</label> 
-         </div> 
-         <div class="INR">
-                <label for="indian-rupee-symbol">&#x20AC;</label>  
-         </div> 
-      </div>
-
-        
+            <div class="button">
+                <input type="submit" value="Submit" class="nes-btn">
+            </div>
+        </form>
     </div>
 
+    <div class="display">
+        <div class="display-amount-wc">
+            
+         </div>
+         <div class="display-name-wc">
+             
+         </div> 
+    </div>
 
     <script src="app.js"></script>
 </body>
