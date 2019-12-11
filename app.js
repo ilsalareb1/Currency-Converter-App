@@ -1,41 +1,52 @@
-const DOMstrings = {
-    AmountCurrentCurrency: document.getElementById("amount"),
-    displayWantedCurrency: document.getElementsByClassName(".display-name-wc"),
-    displayConvertedAmount: document.getElementsByClassName(".display-amount-wc"),
-    type: document.querySelector(".type"),
-    input: document.getElementById("currency-form")
-};
-
-DOMstrings.input.addEventListener("keypress", function(event){
-    if (event.keyCode === 13){
-        event.preventDefault();
-        document.querySelector(".nes-btn").click();
-    }
-});
 
 function init(){
-    document.getElementById("currency-form").addEventListener("sumbit", async function(e){
-        e.preventDefault();
-        DOMstrings.displayWantedCurrency.innerText = 'test';
-        const ExchangeRates = await fetch (`http://data.fixer.io/api/latest?=access_key=aa7cbda9baeeeda7532c0f97afaafdc6&symbols=USD,AUD,CAD,PLN,MXN`);
-        await ExchangeRates.json(); 
-        calculateConvertedAmount(AmountCurrentCurrency){
-            ExchangeRates * AmountCurrentCurrency;
-        }
-        try {
-            const displayWantedCurrency = function (data) {
-              DOMstrings.displayWantedCurrency.innerText = data.name;
-              DOMstrings.displayConvertedAmount.innerText = data.id;
-              DOMstrings.type.textContent = data.types.map(data => data.type.name);    
-            };
-            displayWantedCurrency(data);
-            document.querySelector("#CurrentCurrency").value = "";  
-        }catch (error){
-            console.log(error);
-            DOMstrings.type.textContent = 'Error Please try again';
-        }
-    });
-    
+    var usd, euro, jpy, chf, cad, gbp, inr;
+
+ usd = document.getElementById("MoneyInput");
+ euro = document.getElementById("euro");
+ jpy = document.getElementById("jpy");
+ chf = document.getElementById("chf");
+ cad = document.getElementById("cad");
+ gbp = document.getElementById("gbp");
+ inr = document.getElementById("inr");
+
+ usd.addEventListener('input', function(e){
+    var usdAmount, usdToEuro, usdToJPY, usdToCHF, usdToCAD, usdToGBP, usdToINR;
+
+    usdAmount = e.target.value;
+    usdToEuro = usdAmount * 0.90;
+    usdToJPY = usdAmount * 108.64;
+    usdToCHF = usdAmount * .99;
+    usdToCAD = usdAmount * 1.32;
+    usdToGBP = usdAmount * .76;
+    usdToINR = usdAmount * 70.74;
+
+    console.log(usdAmount, usdToEuro);
+
+    document.getElementById("euro").innerHTML = "&#8364; " + usdToEuro;
+    document.getElementById("jpy").innerHTML = "&#xa5; " + usdToJPY;
+    document.getElementById("chf").innerHTML = "&#x20A3; " + usdToCHF;
+    document.getElementById("cad").innerHTML = "&#xFF04; " + usdToCAD;
+    document.getElementById("gbp").innerHTML = "&#xa3; " + usdToGBP;
+    document.getElementById("inr").innerHTML = "&#x20B9;" + usdToINR;
+   });
 }
 
 init();
+/* var usd, euro;
+
+usd = document.getElementById("MoneyInput");
+euro = document.getElementById("euro");
+
+usd.addEventListener('input', function(e){
+    var usdAmount, usdToEuro;
+
+    usdAmount = e.target.value;
+    usdToEuro = usdAmount * 0.891407;
+
+    console.log(usdAmount, usdToEuro);
+
+    document.getElementById("euro").innerHTML = usdToEuro;
+
+
+}); */

@@ -16,16 +16,14 @@ background-image: linear-gradient(to top, #791a9d, #6dd9cc);
     width: 100%;
     margin: 0 auto;
     align-content: center;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 5rem;
+}
+.header{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 5rem;
+  text-decoration-color: snow;
 }
 
-.user-input{
-    width: 100%;
-    margin: 0 auto;
-    align-content: center;
-}
 
 .currency-form-input{
     margin: 0 auto;
@@ -37,17 +35,20 @@ background-image: linear-gradient(to top, #791a9d, #6dd9cc);
 
 }
 
-.currency-convert-input{
+ul.currencies li{
     margin: 0 auto;
     margin-top: 1rem;
+    width: 75vw;
+    height:15vh;
     align-content: center;
-    text-transform: capitalize;
     text-align: center;
     font-size: 3rem;
-
+    list-style: none;
 }
 
-.nes-btn,
+
+
+/* .nes-btn,
 .nes-btn:link,
 .nes-btn:visited {
   text-transform: uppercase;
@@ -72,4 +73,4 @@ background-image: linear-gradient(to top, #791a9d, #6dd9cc);
 .nes-btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0.2);
-}
+} */

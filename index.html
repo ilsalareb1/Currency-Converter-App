@@ -11,101 +11,41 @@
         <div class="header">CURRENCY CONVERTER</div>
     </div>
 
-    <div class="user-input">
-        <form id=currency-form>
+    <div class="container">
+        <form id=form>
             <div class="currency-form-input">
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" class="text-box">
-
-                <select id= "CurrentCurrency">
-                    <option value = "1">AUD</option>
-                    <option value = "2">CAD</option>
-                    <option value = "3">CZK</option>
-                    <option value = "4">HKD</option>+
-                    
-                    <option value = "5">IDR</option>
-                    <option value = "6">JPY</option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-           
-                </select>
+                <label for="amount">&#36;</label>
+                <input type="number" id="MoneyInput" class="text-box" placeholder="Enter amount in USD">
             </div>
-           
-            
-            <div class= "currency-convert-input">
-                <label>Convert to:</label>
-                <select id= "WantedCurrency">
-                    <option value = "1">AUD</option>
-                    <option value = "2">CAD</option>
-                    <option value = "3">CZK</option>
-                    <option value = "4">HKD</option>
-                    <option value = "5">IDR</option>
-                    <option value = "6">JPY</option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                    <option value = ""></option>
-                </select>
-            </div> 
+       </form>
+       <ul class="currencies">
+           <li class="currency-1">
+             <h2 class="currency-title">Euro</h2>
+             <p class= "currency-value" id="euro">&#8364;</p>
+           </li>
+           <li class="currency-2">
+             <h2 class="currency-title">JPY</h2>
+             <p class= "currency-value" id="jpy">&#xa5;</p>
+           </li>
+           <li class="currency-3">
+             <h2 class="currency-title">CHF</h2>
+             <p class= "currency-value" id="chf">&#x20A3;</p>
+           </li>
+           <li class="currency-4">
+                <h2 class="currency-title">CAD</h2>
+                <p class= "currency-value" id="cad">&#xFF04;</p>
+           </li>
+           <li class="currency-5">
+                <h2 class="currency-title">GBP</h2>
+                <p class= "currency-value" id="gbp">&#xa3;</p>
+           </li>
+           <li class="currency-6">
+                <h2 class="currency-title">INR</h2>
+                <p class= "currency-value" id="inr">&#x20B9;</p>
+           </li>
+       </ul>
 
-            <div class="button">
-                <input type="submit" value="Submit" class="nes-btn">
-            </div>
-        </form>
     </div>
-
-    <div class="display">
-        <div class="display-amount-wc">
-            
-         </div>
-         <div class="display-name-wc">
-             
-         </div> 
-    </div>
-
     <script src="app.js"></script>
 </body>
 </html>
