@@ -8,43 +8,66 @@
 </head>
 <body>
     <div class="banner">
-        <div class="header">CURRENCY CONVERTER</div>
+      <p>CURRENCY CONVERTER</p>
     </div>
 
     <div class="container">
         <form id=form>
             <div class="currency-form-input">
                 <label for="amount">&#36;</label>
-                <input type="number" id="MoneyInput" class="text-box" placeholder="Enter amount in USD">
+                <input type="number" id="MoneyInput" class="text-box" placeholder="00.00">
             </div>
        </form>
        <ul class="currencies">
            <li class="currency-1">
-             <h2 class="currency-title">Euro</h2>
-             <p class= "currency-value" id="euro">&#8364;</p>
+             <p class="currency-title">EURO </p>
+             <p class= "currency-value" id="euro">&#8364;00.00</p>
+             <div class="exchange-rate-info">
+              <p>1 USD = .90 EURO</p>
+             </div>
            </li>
            <li class="currency-2">
-             <h2 class="currency-title">JPY</h2>
-             <p class= "currency-value" id="jpy">&#xa5;</p>
+             <p class="currency-title">JAPANESE YEN</p>
+             <p class= "currency-value" id="jpy">&#xa5;00.00</p>
+             <div class="exchange-rate-info">
+              <p>1 USD = 108.64 JPY</p>
+             </div>
            </li>
            <li class="currency-3">
-             <h2 class="currency-title">CHF</h2>
-             <p class= "currency-value" id="chf">&#x20A3;</p>
+             <p class="currency-title">SWISS FRANC</p>
+             <p class= "currency-value" id="chf">&#x20A3;00.00</p>
+             <div class="exchange-rate-info">
+              <p>1 USD = .99 CHF</p>
+             </div>   
            </li>
            <li class="currency-4">
-                <h2 class="currency-title">CAD</h2>
-                <p class= "currency-value" id="cad">&#xFF04;</p>
+                <p class="currency-title">CANADIAN DOLLAR</p>
+                <p class= "currency-value" id="cad">&#xFF04;00.00</p>
+                <div class="exchange-rate-info">
+                  <p>1 USD = 1.32 CAD</p>
+                </div>
            </li>
            <li class="currency-5">
-                <h2 class="currency-title">GBP</h2>
-                <p class= "currency-value" id="gbp">&#xa3;</p>
+                <p class="currency-title">GREAT BRITISH POUND</p>
+                <p class= "currency-value" id="gbp">&#xa3;00.00</p>
+                <div class="exchange-rate-info">
+                  <p>1 USD = .76 GBP</p>
+                </div>
            </li>
            <li class="currency-6">
-                <h2 class="currency-title">INR</h2>
-                <p class= "currency-value" id="inr">&#x20B9;</p>
+                <p class="currency-title">INDIAN RUPEE</p>
+                <p class= "currency-value" id="inr">&#x20B9;00.00</p>
+                <div class="exchange-rate-info">
+                  <p>1USD = 70.74 INR</p>
+                </div>
            </li>
        </ul>
-
+       <button class="add-currency-btn"><b>ADD CURRENCY</b></button>
+       <ul class="add-currency-list">
+         <li data-currency="yuan"><span>&#x5143;- Chinese Yuan</span></li>
+         <li data-currency="ruble"><span>&#x20BD; - Russian Ruble</span></li>
+         <li data-currency="peso"><span>&#x20B1; - Philipine Peso</span></li>
+       </ul>
     </div>
     <script src="app.js"></script>
 </body>

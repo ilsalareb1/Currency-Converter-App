@@ -14,12 +14,12 @@ function init(){
     var usdAmount, usdToEuro, usdToJPY, usdToCHF, usdToCAD, usdToGBP, usdToINR;
 
     usdAmount = e.target.value;
-    usdToEuro = usdAmount * 0.90;
-    usdToJPY = usdAmount * 108.64;
-    usdToCHF = usdAmount * .99;
-    usdToCAD = usdAmount * 1.32;
-    usdToGBP = usdAmount * .76;
-    usdToINR = usdAmount * 70.74;
+    usdToEuro = (usdAmount * 0.90).toFixed(2);
+    usdToJPY = (usdAmount * 108.64).toFixed(2);
+    usdToCHF = (usdAmount * .99).toFixed(2);
+    usdToCAD = (usdAmount * 1.32).toFixed(2);
+    usdToGBP = (usdAmount * .76).toFixed(2);
+    usdToINR = (usdAmount * 70.74).toFixed(2);
 
     console.log(usdAmount, usdToEuro);
 

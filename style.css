@@ -8,43 +8,183 @@ html{
 
 
 body {
-background-image: linear-gradient(to top, #791a9d, #6dd9cc);
+background-color: #CEC3C1;
 }
 
+.container{
+  margin: 0 auto;
+  position: relative;
+  align-content: center;
+  width: 50vw;
+  height: 120vh;
+  background-color: #2F131E;
+  border-radius: 15px;
+  z-index: 0;
+}
+.banner{
+  width: 50vw;
+  height: 15vh;
+  position: absolute;
+  left:50%;
+  transform: translate(-50%, 0);
+  top: 10px;
+  align-content: center;
+  margin: 0 auto;
+  z-index: 1;
+}
 
-.banner {
+.banner p{
     width: 100%;
     margin: 0 auto;
     align-content: center;
-}
-.header{
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 5rem;
-  text-decoration-color: snow;
+   text-align: center;
+   text-transform: capitalize;
+   font-size: 5rem;
+   color: snow;
 }
 
+@media only screen and (max-width:375px) {
+  .banner p{
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width:414px) {
+  .banner p{
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width:360px) {
+  .banner p{
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width:411px) {
+  .banner p{
+    font-size: 3rem;
+  }
+}
 
 .currency-form-input{
     margin: 0 auto;
+    position: absolute;
+    top:13%;
+    left:50%;
+    transform: translate(-50%, -50%);
     margin-top: 1rem;
     align-content: center;
     text-transform: capitalize;
     text-align: center;
     font-size: 3rem;
+    color: snow;
 
 }
 
+ul.currencies{
+  margin: 0 auto;
+  margin-top: .5rem;
+  width:40vw;
+  height: 83vh;
+  position: absolute;
+  top:18%;
+  left:50%;
+  transform: translate(-50%, 0);
+  padding: 0 1.5rem 1rem 1.5rem;
+  overflow-y: auto;
+}
+
+ul.currencies::-webkit-scrollbar {
+  width:5px;
+}
+
+ul.currencies::-webkit-scrollbar-thumb{
+  background-color: #87F5FB;
+  border-bottom: 1rem solid  #2EC4B6;
+}
 ul.currencies li{
-    margin: 0 auto;
-    margin-top: 1rem;
-    width: 75vw;
-    height:15vh;
-    align-content: center;
-    text-align: center;
-    font-size: 3rem;
-    list-style: none;
+  margin-top: 1rem;
+  list-style: none;
+  height: 25vh;
+  background-color: #8C5E58;
+  border-radius: 5px;
+  padding-top: .5rem;
+  padding-bottom: .5rem;  
 }
+
+.currency-title{
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize; 
+  color: snow;
+}
+
+ul.currencies li.close{
+  position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.close:hover{
+	color: #305f72;
+}
+.currency-value{
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize; 
+  color: snow;
+}
+
+.exchange-rate-info{
+  font-size:1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  text-transform: capitalize; 
+  color: snow;
+
+}
+
+ul.add-currency-list{
+  position: absolute;
+  bottom:12px;
+  width: 50vw;
+  height:15vh;
+  text-align: center;
+  color: #333;
+  background-color: snow;
+  list-style: none;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  display:none;
+}
+
+ul.add-currency-list li{
+  padding: .75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.add-currency-btn{
+  position: absolute;
+  bottom: 0;
+  height:10vh;
+  text-transform: ;
+  background-color: #87F5FB;
+  width: 50vw;
+}
+
+.add-currency-btn:hover {
+  background-color:#DE3C4B;
+  
+}
+
+.add-currency-btn:hover + ul.add-currency-list {
+  display:block;
+} 
 
 
 
