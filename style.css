@@ -151,9 +151,9 @@ ul.currencies li.close{
 
 ul.add-currency-list{
   position: absolute;
-  bottom:12px;
-  width: 50vw;
-  height:15vh;
+  bottom: 8.1rem;
+  width: 48vw;
+  height: 90vh;
   text-align: center;
   color: #333;
   background-color: snow;
@@ -177,13 +177,14 @@ ul.add-currency-list li{
   width: 50vw;
 }
 
-.add-currency-btn:hover {
+.add-currency-btn:active {
   background-color:#DE3C4B;
   
 }
 
-.add-currency-btn:hover + ul.add-currency-list {
+.add-currency-btn:active + ul.add-currency-list {
   display:block;
+
 } 
 
 
