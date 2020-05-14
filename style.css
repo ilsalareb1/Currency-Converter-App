@@ -85,7 +85,7 @@ ul.currencies{
   margin: 0 auto;
   margin-top: .5rem;
   width:40vw;
-  height: 83vh;
+  height: 90vh;
   position: absolute;
   top:18%;
   left:50%;
@@ -148,44 +148,6 @@ ul.currencies li.close{
   color: snow;
 
 }
-
-ul.add-currency-list{
-  position: absolute;
-  bottom: 8.1rem;
-  width: 48vw;
-  height: 90vh;
-  text-align: center;
-  color: #333;
-  background-color: snow;
-  list-style: none;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-  display:none;
-}
-
-ul.add-currency-list li{
-  padding: .75rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.add-currency-btn{
-  position: absolute;
-  bottom: 0;
-  height:10vh;
-  text-transform: ;
-  background-color: #87F5FB;
-  width: 50vw;
-}
-
-.add-currency-btn:active {
-  background-color:#DE3C4B;
-  
-}
-
-.add-currency-btn:active + ul.add-currency-list {
-  display:block;
-
-} 
 
 
 
